@@ -4,8 +4,114 @@
 $kaldi-red: #FD461E
 $kaldi-red-invert: #fff
 
-$primary: $kaldi-red
+$tan: #f7f6ee
+$optan: rgba( $tan, .7 )
+$darkBlue: #4f515e
+$lightBlue: #69c2e2
+$pink: #ffb2b5
+$beige: #f9f8f3
+$brown: #b0a683
+$darkBrown: #5e5743
+
+$primary: $darkBlue
 $primary-invert: $kaldi-red-invert
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya')
+@import url('https://fonts.googleapis.com/css?family=Poppins')
+
+
+.large
+  font-size: 1.5em
+
+.navbar-item img 
+    max-height: 2.75rem !important
+
+
+.callout .content h3
+  text-align: center
+  max-width: 670px
+  margin: auto
+  line-height: 1.5em
+  font-size: 1.25em
+  color: white !important
+
+.callout 
+  background: $brown
+  color: white !important
+  
+
+.rounded
+  border-radius: 99999px !important
+  padding-left: 1.25em !important
+  padding-right: 1.25em !important
+
+.goose 
+  height: 150px
+  background: white
+  border: 99999
+  border-radius: 999999px
+  width: 150px
+  padding: 1.5em
+
+.button
+  text-transform: capitalize
+  font-weight: 700
+  height: 3em !important
+  position: relative
+  top: 0px
+  transition: all 0.3s ease-in-out
+  color: $white !important
+  background: #609eb7 !important
+  border: 0px !important
+
+.button:hover
+  top: -3px
+  box-shadow: 1px 5px 10px #a67c6d;
+
+.shadowbox
+  background: white
+  box-shadow: 1px 5px 10px #000024
+
+.hero
+  background: $pink
+  text-align: center
+  background: linear-gradient($optan, $optan), url('https://c.pxhere.com/photos/6a/6a/newborn_baby_feet_basket_young_delicate_toes_small-622315.jpg!d')
+  background-size: cover
+
+.hero, .hero .container,
+  min-height: 450px
+  
+.hero .container
+  display: flex
+  align-items: center
+  justify-content: center
+
+.hero h1
+  color: $darkBrown !important
+  font-family: 'Poppins', sans-serif
+  margin-bottom: 0.25em !important
+  font-size: 2.75em !important
+  letter-spacing: 2px
+
+
+html, body, #___gatsby 
+  min-height: 100vh
+
+.navbar-item
+  padding-left: 24px !important
+
+#logotype
+  font-family: 'Alegreya', serif !important
+  letter-spacing: 2px
+  font-size: 1.2em
+
+.navbar-burger, .navbar-brand
+  height: 4em !important
+
+body
+  background: $tan
 
 // Helper Classes
 .full-width-image-container
