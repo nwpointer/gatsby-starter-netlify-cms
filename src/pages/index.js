@@ -22,42 +22,33 @@ export default class IndexPage extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <section className="section">
-        <Script
-          url="https://identity.netlify.com/v1/netlify-identity-widget.js"
-          onLoad={() => this.handleScriptLoad()}
-        />
-        <div className="container">
-          <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
+      <div>
+        <section className="section hero">
+          <Script
+            url="https://identity.netlify.com/v1/netlify-identity-widget.js"
+            onLoad={() => this.handleScriptLoad()}
+          />
+          <div className="container">
+            <div className="content">
+              {/*<img className="goose" src="https://theverygreengrocer.co.uk/wp-content/uploads/2016/06/IMG_1137.png" alt=""/>*/}
+              <h1 className="has-text-weight-bold is-size-2">You Deserve comfort of mind</h1>
+              <div className="large">for both you &amp; you unborn child</div>
+              <br/> <br/>
+
+              {<button className="button rounded">explore our services</button>}
+            </div>
           </div>
-          {posts
-            .filter(post => post.node.frontmatter.templateKey === "blog-post")
-            .map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ border: "1px solid #eaecee", padding: "2em 4em" }}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.frontmatter.path}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.frontmatter.path}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </div>
-            ))}
-        </div>
-      </section>
+        </section>
+        <section className="section callout">
+          <div className="container">
+            <div className="content">
+              <h3>
+                Your entire experience from pregnancy to parenthood should be memorable, put you and your partner at ease and leave you feeling wrapped in comfort. Learn how we can support you.
+              </h3>
+            </div>
+          </div>
+        </section>
+      </div>
     );
   }
 }
